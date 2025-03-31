@@ -156,7 +156,7 @@ void process_json(radar_omnipresense::radar_data *data, std::vector<std::string>
             else
                 data->speed = atof(speed->valuestring);
 
-            if (data->speed >= 0)
+            if (data->speed > 0)
             data->direction = "inbound";
             else if (data->speed == 0)
             data->direction = "still";
